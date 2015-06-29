@@ -60,6 +60,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="nrh-p6-5p7">
+                        <barButtonItem key="leftBarButtonItem" image="ProfilePlaceHolder" id="v0y-M1-ykf"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="4J6-RO-zda">
                             <connections>
                                 <action selector="cameraButtonPressed:" destination="BYZ-38-t0r" id="Ifo-rO-mKo"/>
@@ -69,11 +70,30 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="RCI-QT-aJ5" id="pjY-2U-zF5"/>
+                        <segue destination="01s-Mw-qU8" kind="show" id="d90-dP-Qku"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1101" y="429"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="DFz-O5-sEL">
+            <objects>
+                <viewController id="01s-Mw-qU8" customClass="ProfileViewController" customModule="ExchangeAGram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fx2-Qy-4je"/>
+                        <viewControllerLayoutGuide type="bottom" id="f7m-Mh-Jyo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IAF-Lp-seb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E5f-aY-Ymc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="899" y="1173"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qJr-i5-KKS">
@@ -94,4 +114,7 @@
             <point key="canvasLocation" x="402" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ProfilePlaceHolder" width="32" height="32"/>
+    </resources>
 </document>

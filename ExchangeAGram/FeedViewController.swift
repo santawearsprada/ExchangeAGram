@@ -23,11 +23,15 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
 
         // Do any additional setup after loading the view.
         
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         let request = NSFetchRequest(entityName: "FeedItem")
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context:NSManagedObjectContext = appDelegate.managedObjectContext!
         feedArray = context.executeFetchRequest(request, error: nil)!  // This function does not know what type it is going to return that's why we use AnyObject
-        
+        collectionView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -125,6 +129,9 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         
         let imageData = UIImageJPEGRepresentation(image, 1.0)   // return NSData instance
+        let thumbNailData = UIImageJPEGRepresentation(image, 0.1)
+        
+        
         // CORE DATA
         let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         let entityDescription = NSEntityDescription.entityForName("FeedItem", inManagedObjectContext: managedObjectContext!)
@@ -132,6 +139,10 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         feedItem.image = imageData
         feedItem.caption = "test caption"
+        feedItem.thumbnail = thumbNailData
+        
+        let UUID = NSUUID().UUIDString
+        feedItem.uniqueID = UUID
         
         (UIApplication.sharedApplication().delegate as! AppDelegate).saveContext()
         

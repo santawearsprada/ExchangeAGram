@@ -16,8 +16,10 @@
 		F92542491B3C98C80058BDDA /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92542481B3C98C80058BDDA /* FeedViewController.swift */; };
 		F925424B1B3C9A9B0058BDDA /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925424A1B3C9A9B0058BDDA /* FeedCell.swift */; };
 		F925424D1B3C9C9B0058BDDA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F925424C1B3C9C9B0058BDDA /* MobileCoreServices.framework */; };
-		F92542551B3CAC420058BDDA /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92542541B3CAC420058BDDA /* FeedItem.swift */; };
 		F92542571B3DB9DB0058BDDA /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92542561B3DB9DA0058BDDA /* FilterViewController.swift */; };
+		F92542591B41092B0058BDDA /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92542581B41092A0058BDDA /* FilterCell.swift */; };
+		F925425E1B41FEA30058BDDA /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925425D1B41FEA30058BDDA /* FeedItem.swift */; };
+		F92542601B42044D0058BDDA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925425F1B42044D0058BDDA /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +46,10 @@
 		F92542481B3C98C80058BDDA /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		F925424A1B3C9A9B0058BDDA /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		F925424C1B3C9C9B0058BDDA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		F92542541B3CAC420058BDDA /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		F92542561B3DB9DA0058BDDA /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		F92542581B41092A0058BDDA /* FilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		F925425D1B41FEA30058BDDA /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		F925425F1B42044D0058BDDA /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,15 +93,16 @@
 		F92542221B3C972D0058BDDA /* ExchangeAGram */ = {
 			isa = PBXGroup;
 			children = (
-				F92542541B3CAC420058BDDA /* FeedItem.swift */,
+				F925425C1B41DF490058BDDA /* Model */,
 				F92542251B3C972D0058BDDA /* AppDelegate.swift */,
 				F92542481B3C98C80058BDDA /* FeedViewController.swift */,
+				F925425F1B42044D0058BDDA /* ProfileViewController.swift */,
 				F92542561B3DB9DA0058BDDA /* FilterViewController.swift */,
+				F92542581B41092A0058BDDA /* FilterCell.swift */,
 				F925424A1B3C9A9B0058BDDA /* FeedCell.swift */,
 				F925422C1B3C972D0058BDDA /* Main.storyboard */,
 				F925422F1B3C972D0058BDDA /* Images.xcassets */,
 				F92542311B3C972D0058BDDA /* LaunchScreen.xib */,
-				F92542271B3C972D0058BDDA /* ExchangeAGram.xcdatamodeld */,
 				F92542231B3C972D0058BDDA /* Supporting Files */,
 			);
 			path = ExchangeAGram;
@@ -126,6 +131,15 @@
 				F925423D1B3C972D0058BDDA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F925425C1B41DF490058BDDA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F925425D1B41FEA30058BDDA /* FeedItem.swift */,
+				F92542271B3C972D0058BDDA /* ExchangeAGram.xcdatamodeld */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,11 +242,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F92542591B41092B0058BDDA /* FilterCell.swift in Sources */,
 				F92542571B3DB9DB0058BDDA /* FilterViewController.swift in Sources */,
 				F92542261B3C972D0058BDDA /* AppDelegate.swift in Sources */,
 				F925424B1B3C9A9B0058BDDA /* FeedCell.swift in Sources */,
 				F92542491B3C98C80058BDDA /* FeedViewController.swift in Sources */,
-				F92542551B3CAC420058BDDA /* FeedItem.swift in Sources */,
+				F925425E1B41FEA30058BDDA /* FeedItem.swift in Sources */,
+				F92542601B42044D0058BDDA /* ProfileViewController.swift in Sources */,
 				F92542291B3C972D0058BDDA /* ExchangeAGram.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
