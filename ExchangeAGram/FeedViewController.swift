@@ -105,6 +105,20 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         
     }
     
+    // UICollectionViewDelegate
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let thisItem = feedArray[indexPath.row] as! FeedItem
+        
+
+        // ### CREATE FilterViewController by CODE #####
+        var filterVC = FilterViewController()
+        filterVC.thisFeedItem = thisItem
+        
+        self.navigationController?.pushViewController(filterVC, animated: true)
+        
+        
+    }
+    
     // UIImagePickerControllerDelegate
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         // info is dictionary key value pair
