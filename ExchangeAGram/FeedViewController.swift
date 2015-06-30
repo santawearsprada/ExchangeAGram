@@ -17,12 +17,16 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     var feedArray:[AnyObject] = []
     
+    @IBAction func profileButtonPressed(sender: UIBarButtonItem) {
+        self.performSegueWithIdentifier("showProfile", sender: nil)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+    
         
     }
     
